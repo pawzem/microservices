@@ -1,0 +1,1205 @@
+{
+    "configuration": {},
+    "description": "DSL, przykłąd z użyciem DSL",
+    "documentation": {},
+    "id": 94356,
+    "lastModifiedAgent": "structurizr-cloud/dsl-editor/dcd75e58-7ff7-4693-89fe-64f1486a80d7",
+    "lastModifiedDate": "2024-08-13T11:16:14Z",
+    "lastModifiedUser": "pawel.zemla@fox-tech.org",
+    "model": {
+        "deploymentNodes": [
+            {
+                "children": [
+                    {
+                        "containerInstances": [
+                            {
+                                "containerId": "9",
+                                "deploymentGroups": [
+                                    "Default"
+                                ],
+                                "environment": "Development",
+                                "id": "52",
+                                "instanceId": 1,
+                                "properties": {
+                                    "structurizr.dsl.identifier": "developersinglepageapplicationinstance"
+                                },
+                                "relationships": [
+                                    {
+                                        "description": "Kozysta z API",
+                                        "destinationId": "56",
+                                        "id": "57",
+                                        "linkedRelationshipId": "32",
+                                        "sourceId": "52",
+                                        "technology": "JSON/HTTPS"
+                                    }
+                                ],
+                                "tags": "Container Instance"
+                            }
+                        ],
+                        "environment": "Development",
+                        "id": "51",
+                        "instances": "1",
+                        "name": "Web Browser",
+                        "properties": {
+                            "structurizr.dsl.identifier": "0cafad57-8c0b-4b8b-8bea-c376621d6057"
+                        },
+                        "tags": "Element,Deployment Node",
+                        "technology": "Chrome, Firefox, Safari, or Edge"
+                    },
+                    {
+                        "children": [
+                            {
+                                "containerInstances": [
+                                    {
+                                        "containerId": "9",
+                                        "deploymentGroups": [
+                                            "Default"
+                                        ],
+                                        "environment": "Development",
+                                        "id": "55",
+                                        "instanceId": 1,
+                                        "properties": {
+                                            "structurizr.dsl.identifier": "developerwebapplicationinstance"
+                                        },
+                                        "relationships": [
+                                            {
+                                                "description": "Kozysta z API",
+                                                "destinationId": "56",
+                                                "id": "58",
+                                                "linkedRelationshipId": "32",
+                                                "sourceId": "55",
+                                                "technology": "JSON/HTTPS"
+                                            }
+                                        ],
+                                        "tags": "Container Instance"
+                                    },
+                                    {
+                                        "containerId": "11",
+                                        "deploymentGroups": [
+                                            "Default"
+                                        ],
+                                        "environment": "Development",
+                                        "id": "56",
+                                        "instanceId": 1,
+                                        "properties": {
+                                            "structurizr.dsl.identifier": "developerapiapplicationinstance"
+                                        },
+                                        "relationships": [
+                                            {
+                                                "description": "Zapisuje Stan",
+                                                "destinationId": "61",
+                                                "id": "62",
+                                                "linkedRelationshipId": "36",
+                                                "sourceId": "56"
+                                            }
+                                        ],
+                                        "tags": "Container Instance"
+                                    }
+                                ],
+                                "environment": "Development",
+                                "id": "54",
+                                "instances": "1",
+                                "name": "Apache Tomcat",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "41f36433-7a59-4844-8cea-08017f8ff5ce"
+                                },
+                                "tags": "Element,Deployment Node",
+                                "technology": "Apache Tomcat 8.x"
+                            }
+                        ],
+                        "environment": "Development",
+                        "id": "53",
+                        "instances": "1",
+                        "name": "Docker Container - Web Server",
+                        "properties": {
+                            "structurizr.dsl.identifier": "e49c9104-06ad-4187-bf3a-61cb4ef699d4"
+                        },
+                        "tags": "Element,Deployment Node",
+                        "technology": "Docker"
+                    },
+                    {
+                        "children": [
+                            {
+                                "containerInstances": [
+                                    {
+                                        "containerId": "16",
+                                        "deploymentGroups": [
+                                            "Default"
+                                        ],
+                                        "environment": "Development",
+                                        "id": "61",
+                                        "instanceId": 1,
+                                        "properties": {
+                                            "structurizr.dsl.identifier": "developerdatabaseinstance"
+                                        },
+                                        "tags": "Container Instance"
+                                    }
+                                ],
+                                "environment": "Development",
+                                "id": "60",
+                                "instances": "1",
+                                "name": "Database Server",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "845ae829-9993-4931-a7d8-8ef1915d6026"
+                                },
+                                "tags": "Element,Deployment Node",
+                                "technology": "MongoDB"
+                            }
+                        ],
+                        "environment": "Development",
+                        "id": "59",
+                        "instances": "1",
+                        "name": "Docker Container - Database Server",
+                        "properties": {
+                            "structurizr.dsl.identifier": "3f65ffcb-11f6-40fa-bab7-2966c8395ba0"
+                        },
+                        "tags": "Element,Deployment Node",
+                        "technology": "Docker"
+                    }
+                ],
+                "environment": "Development",
+                "id": "50",
+                "instances": "1",
+                "name": "Developer Laptop",
+                "properties": {
+                    "structurizr.dsl.identifier": "caeeec8e-6243-4298-9067-18977c9fd93b"
+                },
+                "tags": "Element,Deployment Node",
+                "technology": "Apple macOS"
+            }
+        ],
+        "people": [
+            {
+                "description": "Klient, który chce kupić bilet do kina",
+                "id": "1",
+                "location": "Unspecified",
+                "name": "Zwykły klinet",
+                "properties": {
+                    "structurizr.dsl.identifier": "singlecustomer"
+                },
+                "relationships": [
+                    {
+                        "description": "Przeglad seanse rezerwuje online i płaci",
+                        "destinationId": "8",
+                        "id": "17",
+                        "properties": {
+                            "structurizr.dsl.identifier": "df3ca720-e1c9-417a-96d6-5e7f42b362b1"
+                        },
+                        "sourceId": "1",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "Płatność",
+                        "destinationId": "5",
+                        "id": "19",
+                        "properties": {
+                            "structurizr.dsl.identifier": "00c817b7-abb9-4c54-98dc-949e39f32b7a"
+                        },
+                        "sourceId": "1",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "Przegląda seanse i kupuje bilety",
+                        "destinationId": "7",
+                        "id": "22",
+                        "properties": {
+                            "structurizr.dsl.identifier": "e45fe299-ef3a-4a42-8491-1e26e1b2992d"
+                        },
+                        "sourceId": "1",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "odiwedza kino.pl",
+                        "destinationId": "9",
+                        "id": "27",
+                        "properties": {
+                            "structurizr.dsl.identifier": "a19fe9df-aad5-444b-9580-e81bbd283851"
+                        },
+                        "sourceId": "1",
+                        "tags": "Relationship",
+                        "technology": "HTTPS"
+                    },
+                    {
+                        "description": "przeglada mobilną wersje",
+                        "destinationId": "10",
+                        "id": "31",
+                        "properties": {
+                            "structurizr.dsl.identifier": "f9839b30-0fc7-43a9-919e-cf59da71a55e"
+                        },
+                        "sourceId": "1",
+                        "tags": "Relationship"
+                    }
+                ],
+                "tags": "Element,Person,Customer"
+            },
+            {
+                "description": "Klient który chce dokonać rezerwacji sali na event",
+                "id": "2",
+                "location": "Unspecified",
+                "name": "Klient eventowy",
+                "properties": {
+                    "structurizr.dsl.identifier": "eventcustomer"
+                },
+                "relationships": [
+                    {
+                        "description": "Przeglada wolne terminy i dodatkowe opcje, pobiera dane kontaktowe",
+                        "destinationId": "8",
+                        "id": "18",
+                        "properties": {
+                            "structurizr.dsl.identifier": "d8efa38d-31db-43d8-a6aa-a0240b50be6e"
+                        },
+                        "sourceId": "2",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "odiwedza kino.pl",
+                        "destinationId": "9",
+                        "id": "29",
+                        "properties": {
+                            "structurizr.dsl.identifier": "e813f1b2-f2ad-45a5-a27b-2d801b2363fc"
+                        },
+                        "sourceId": "2",
+                        "tags": "Relationship",
+                        "technology": "HTTPS"
+                    }
+                ],
+                "tags": "Element,Person,Customer"
+            },
+            {
+                "description": "Recepcja",
+                "group": "System kina",
+                "id": "3",
+                "location": "Unspecified",
+                "name": "Obsługa klienta",
+                "properties": {
+                    "structurizr.dsl.identifier": "supportstaff"
+                },
+                "relationships": [
+                    {
+                        "description": "Rezerwuje",
+                        "destinationId": "8",
+                        "id": "20",
+                        "properties": {
+                            "structurizr.dsl.identifier": "c9e308d9-8559-426a-817f-846fbcbeb7a6"
+                        },
+                        "sourceId": "3",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "odiwedza kino.pl",
+                        "destinationId": "9",
+                        "id": "28",
+                        "properties": {
+                            "structurizr.dsl.identifier": "1a986970-60c5-475d-8178-c1a84ec7dc79"
+                        },
+                        "sourceId": "3",
+                        "tags": "Relationship",
+                        "technology": "HTTPS"
+                    }
+                ],
+                "tags": "Element,Person,Staff"
+            },
+            {
+                "description": "Obsługa systemów",
+                "group": "System kina",
+                "id": "4",
+                "location": "Unspecified",
+                "name": "Administracja",
+                "properties": {
+                    "structurizr.dsl.identifier": "backoffice"
+                },
+                "relationships": [
+                    {
+                        "description": "Obsługuje błędy",
+                        "destinationId": "8",
+                        "id": "21",
+                        "properties": {
+                            "structurizr.dsl.identifier": "b8abc951-2bcd-46d8-a01f-10e0ac68033f"
+                        },
+                        "sourceId": "4",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "odiwedza kino.admin.pl",
+                        "destinationId": "9",
+                        "id": "30",
+                        "properties": {
+                            "structurizr.dsl.identifier": "2b58d357-cd2a-447d-b9ab-6f083e065a4c"
+                        },
+                        "sourceId": "4",
+                        "tags": "Relationship",
+                        "technology": "HTTPS"
+                    }
+                ],
+                "tags": "Element,Person,Staff"
+            }
+        ],
+        "softwareSystems": [
+            {
+                "description": "System obsługujacy płatności",
+                "documentation": {},
+                "group": "System kina",
+                "id": "5",
+                "location": "Unspecified",
+                "name": "Płatności",
+                "properties": {
+                    "structurizr.dsl.identifier": "payments"
+                },
+                "relationships": [
+                    {
+                        "description": "Informuje o płatności",
+                        "destinationId": "8",
+                        "id": "25",
+                        "properties": {
+                            "structurizr.dsl.identifier": "5f3adfb1-c317-48fa-a857-2e0956210ee7"
+                        },
+                        "sourceId": "5",
+                        "tags": "Relationship"
+                    }
+                ],
+                "tags": "Element,Software System,Existing System"
+            },
+            {
+                "description": "The internal Microsoft Exchange e-mail system.",
+                "documentation": {},
+                "group": "System kina",
+                "id": "6",
+                "location": "Unspecified",
+                "name": "E-mail System",
+                "properties": {
+                    "structurizr.dsl.identifier": "email"
+                },
+                "tags": "Element,Software System,Existing System"
+            },
+            {
+                "description": "Automat z biletami",
+                "documentation": {},
+                "group": "System kina",
+                "id": "7",
+                "location": "Unspecified",
+                "name": "Biletomat",
+                "properties": {
+                    "structurizr.dsl.identifier": "ticketstation"
+                },
+                "relationships": [
+                    {
+                        "description": "Rezerwuje",
+                        "destinationId": "8",
+                        "id": "26",
+                        "properties": {
+                            "structurizr.dsl.identifier": "0ffb82b5-50ed-4305-a382-b0e64fcc22de"
+                        },
+                        "sourceId": "7",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "Rezerwuje",
+                        "destinationId": "11",
+                        "id": "35",
+                        "properties": {
+                            "structurizr.dsl.identifier": "1004264f-27bc-41f4-9679-2ec791284246"
+                        },
+                        "sourceId": "7",
+                        "tags": "Relationship",
+                        "technology": "JSON/HTTPS"
+                    },
+                    {
+                        "description": "Rezerwuje",
+                        "destinationId": "13",
+                        "id": "45",
+                        "properties": {
+                            "structurizr.dsl.identifier": "f786bfaa-5239-4e7f-837e-460cd699a54d"
+                        },
+                        "sourceId": "7",
+                        "tags": "Relationship"
+                    }
+                ],
+                "tags": "Element,Software System,Existing System"
+            },
+            {
+                "containers": [
+                    {
+                        "description": "Pozwala kożystać z rezzerwacji przez przeglądarkę.",
+                        "documentation": {},
+                        "id": "9",
+                        "name": "Single-Page App",
+                        "properties": {
+                            "structurizr.dsl.identifier": "singlepageapplication"
+                        },
+                        "relationships": [
+                            {
+                                "description": "Kozysta z API",
+                                "destinationId": "11",
+                                "id": "32",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "065191d6-d939-4dea-8050-132dce360492"
+                                },
+                                "sourceId": "9",
+                                "tags": "Relationship",
+                                "technology": "JSON/HTTPS"
+                            },
+                            {
+                                "description": "Autoryzacja i autentykacje",
+                                "destinationId": "12",
+                                "id": "38",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "21ecfb9b-bc02-4d79-a67b-cf5c6ee853bc"
+                                },
+                                "sourceId": "9",
+                                "tags": "Relationship"
+                            },
+                            {
+                                "description": "Rezerwuje",
+                                "destinationId": "13",
+                                "id": "40",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "afe37ecc-f4f5-4edf-a35d-c3d2bf537e78"
+                                },
+                                "sourceId": "9",
+                                "tags": "Relationship"
+                            }
+                        ],
+                        "tags": "Element,Container,Web Browser",
+                        "technology": "JavaScript and Angular"
+                    },
+                    {
+                        "description": "Mobilna wersja sytemu kina",
+                        "documentation": {},
+                        "id": "10",
+                        "name": "Mobile App",
+                        "properties": {
+                            "structurizr.dsl.identifier": "mobileapp"
+                        },
+                        "relationships": [
+                            {
+                                "description": "Kozysta z API",
+                                "destinationId": "11",
+                                "id": "33",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "6394e45b-4037-48c5-8d10-464c2043f423"
+                                },
+                                "sourceId": "10",
+                                "tags": "Relationship",
+                                "technology": "JSON/HTTPS"
+                            },
+                            {
+                                "description": "Autoryzacja i autentykacje",
+                                "destinationId": "12",
+                                "id": "37",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "7a434935-12a0-4835-b79f-dde77c0c8851"
+                                },
+                                "sourceId": "10",
+                                "tags": "Relationship"
+                            },
+                            {
+                                "description": "Rezerwuje",
+                                "destinationId": "13",
+                                "id": "39",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "49b45580-a45b-4f3f-ab98-61181f1467b0"
+                                },
+                                "sourceId": "10",
+                                "tags": "Relationship"
+                            }
+                        ],
+                        "tags": "Element,Container,Mobile App",
+                        "technology": "ReactNative"
+                    },
+                    {
+                        "components": [
+                            {
+                                "description": "Obsługuje uzytkowników",
+                                "documentation": {},
+                                "id": "12",
+                                "name": "Autentykacja i autoryzacja",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "auth"
+                                },
+                                "relationships": [
+                                    {
+                                        "description": "Pobiera użytkowników, Aktualizuje użytkowników",
+                                        "destinationId": "16",
+                                        "id": "49",
+                                        "properties": {
+                                            "structurizr.dsl.identifier": "b5f7b091-6ddb-40c7-9fbe-f7d39b6d1def"
+                                        },
+                                        "sourceId": "12",
+                                        "tags": "Relationship"
+                                    }
+                                ],
+                                "tags": "Element,Component",
+                                "technology": "Spring Rest Controller"
+                            },
+                            {
+                                "description": "Rezerwacja",
+                                "documentation": {},
+                                "id": "13",
+                                "name": "Komponent Rezerwacji",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "reservationcomponent"
+                                },
+                                "relationships": [
+                                    {
+                                        "description": "Odświeża",
+                                        "destinationId": "14",
+                                        "id": "41",
+                                        "properties": {
+                                            "structurizr.dsl.identifier": "c93aca77-a43d-4149-b838-03daf0958c5d"
+                                        },
+                                        "sourceId": "13",
+                                        "tags": "Relationship"
+                                    },
+                                    {
+                                        "description": "Przygotwuje treść powiadomień",
+                                        "destinationId": "15",
+                                        "id": "47",
+                                        "properties": {
+                                            "structurizr.dsl.identifier": "61e49350-4f86-4758-b338-007d7441246b"
+                                        },
+                                        "sourceId": "13",
+                                        "tags": "Relationship"
+                                    },
+                                    {
+                                        "description": "Zapisuje Stan, pobiera aktualny",
+                                        "destinationId": "16",
+                                        "id": "48",
+                                        "properties": {
+                                            "structurizr.dsl.identifier": "0a47080d-e0ca-4808-a5cc-bb7d06a4ef70"
+                                        },
+                                        "sourceId": "13",
+                                        "tags": "Relationship"
+                                    }
+                                ],
+                                "tags": "Element,Component",
+                                "technology": "Spring Module"
+                            },
+                            {
+                                "description": "Rezerwacja",
+                                "documentation": {},
+                                "id": "14",
+                                "name": "Komponent komunikujący się z biletomatem",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "ticketfacadecomponent"
+                                },
+                                "relationships": [
+                                    {
+                                        "description": "Odświeża",
+                                        "destinationId": "7",
+                                        "id": "42",
+                                        "properties": {
+                                            "structurizr.dsl.identifier": "1206b30f-6624-49ef-9e34-90f3a211b477"
+                                        },
+                                        "sourceId": "14",
+                                        "tags": "Relationship"
+                                    }
+                                ],
+                                "tags": "Element,Component",
+                                "technology": "Spring Module"
+                            },
+                            {
+                                "description": "Sends e-mails to users.",
+                                "documentation": {},
+                                "id": "15",
+                                "name": "E-mail Component",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "emailcomponent"
+                                },
+                                "relationships": [
+                                    {
+                                        "description": "Powiadamia",
+                                        "destinationId": "6",
+                                        "id": "46",
+                                        "properties": {
+                                            "structurizr.dsl.identifier": "5bdcafe9-d245-460c-ac8b-e919f757b585"
+                                        },
+                                        "sourceId": "15",
+                                        "tags": "Relationship"
+                                    }
+                                ],
+                                "tags": "Element,Component",
+                                "technology": "Spring Module"
+                            }
+                        ],
+                        "description": "Obsługują rządania przez JSON/HTTPS API.",
+                        "documentation": {},
+                        "id": "11",
+                        "name": "API",
+                        "properties": {
+                            "structurizr.dsl.identifier": "apiapplication"
+                        },
+                        "relationships": [
+                            {
+                                "description": "Wysyła email",
+                                "destinationId": "6",
+                                "id": "34",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "afcc2456-e85e-4994-a591-00ad15bfd790"
+                                },
+                                "sourceId": "11",
+                                "tags": "Relationship",
+                                "technology": "JSON/HTTPS"
+                            },
+                            {
+                                "description": "Zapisuje Stan",
+                                "destinationId": "16",
+                                "id": "36",
+                                "properties": {
+                                    "structurizr.dsl.identifier": "8005df6a-4bf2-4483-a2cb-3cb18f85cab5"
+                                },
+                                "sourceId": "11",
+                                "tags": "Relationship"
+                            },
+                            {
+                                "description": "Odświeża",
+                                "destinationId": "7",
+                                "id": "43",
+                                "linkedRelationshipId": "42",
+                                "sourceId": "11"
+                            }
+                        ],
+                        "tags": "Element,Container",
+                        "technology": "Java and SpringBoot"
+                    },
+                    {
+                        "description": "Przetrzymuje dane o użytkowniakch, rezerwacjach i logach",
+                        "documentation": {},
+                        "id": "16",
+                        "name": "Database",
+                        "properties": {
+                            "structurizr.dsl.identifier": "database"
+                        },
+                        "tags": "Element,Container,Database",
+                        "technology": "MonfoDb"
+                    }
+                ],
+                "description": "Pozwala klientom przegladać seanse i dokonywać rezerwacji",
+                "documentation": {},
+                "group": "System kina",
+                "id": "8",
+                "location": "Unspecified",
+                "name": "System kina",
+                "properties": {
+                    "structurizr.dsl.identifier": "cinemasystem"
+                },
+                "relationships": [
+                    {
+                        "description": "Wysyła maile",
+                        "destinationId": "6",
+                        "id": "23",
+                        "properties": {
+                            "structurizr.dsl.identifier": "4d1f9207-1c2e-4214-97df-b0835eb2645a"
+                        },
+                        "sourceId": "8",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "Przekierowuje",
+                        "destinationId": "5",
+                        "id": "24",
+                        "properties": {
+                            "structurizr.dsl.identifier": "2e2bc530-57d0-4fe7-89a8-3f686ceef7bf"
+                        },
+                        "sourceId": "8",
+                        "tags": "Relationship"
+                    },
+                    {
+                        "description": "Odświeża",
+                        "destinationId": "7",
+                        "id": "44",
+                        "linkedRelationshipId": "42",
+                        "sourceId": "8"
+                    }
+                ],
+                "tags": "Element,Software System"
+            }
+        ]
+    },
+    "name": "Kino",
+    "properties": {
+        "structurizr.dsl": "d29ya3NwYWNlICJLaW5vIiAiRFNMLCBwcnp5a8WCxIVkIHogdcW8eWNpZW0gRFNMIiB7CgogICAgbW9kZWwgewogICAgICAgIHNpbmdsZUN1c3RvbWVyID0gcGVyc29uICJad3lrxYJ5IGtsaW5ldCIgIktsaWVudCwga3TDs3J5IGNoY2Uga3VwacSHIGJpbGV0IGRvIGtpbmEiICJDdXN0b21lciIKICAgICAgICBldmVudEN1c3RvbWVyID0gcGVyc29uICJLbGllbnQgZXZlbnRvd3kiICJLbGllbnQga3TDs3J5IGNoY2UgZG9rb25hxIcgcmV6ZXJ3YWNqaSBzYWxpIG5hIGV2ZW50IiAiQ3VzdG9tZXIiCgoKICAgICAgICBncm91cCAiU3lzdGVtIGtpbmEiIHsKICAgICAgICAgICAgc3VwcG9ydFN0YWZmID0gcGVyc29uICJPYnPFgnVnYSBrbGllbnRhIiAiUmVjZXBjamEiICJTdGFmZiIKICAgICAgICAgICAgYmFja29mZmljZSA9IHBlcnNvbiAiQWRtaW5pc3RyYWNqYSIgIk9ic8WCdWdhIHN5c3RlbcOzdyIgIlN0YWZmIgoKICAgICAgICAgICAgcGF5bWVudHMgPSBzb2Z0d2FyZXN5c3RlbSAiUMWCYXRub8WbY2kiICJTeXN0ZW0gb2JzxYJ1Z3VqYWN5IHDFgmF0bm/Fm2NpIiAiRXhpc3RpbmcgU3lzdGVtIgogICAgICAgICAgICBlbWFpbCA9IHNvZnR3YXJlc3lzdGVtICJFLW1haWwgU3lzdGVtIiAiVGhlIGludGVybmFsIE1pY3Jvc29mdCBFeGNoYW5nZSBlLW1haWwgc3lzdGVtLiIgIkV4aXN0aW5nIFN5c3RlbSIKICAgICAgICAgICAgdGlja2V0U3RhdGlvbiA9IHNvZnR3YXJlc3lzdGVtICJCaWxldG9tYXQiICJBdXRvbWF0IHogYmlsZXRhbWkiICJFeGlzdGluZyBTeXN0ZW0iCgogICAgICAgICAgICBjaW5lbWFTeXN0ZW0gPSBzb2Z0d2FyZXN5c3RlbSAiU3lzdGVtIGtpbmEiICJQb3p3YWxhIGtsaWVudG9tIHByemVnbGFkYcSHIHNlYW5zZSBpIGRva29ueXdhxIcgcmV6ZXJ3YWNqaSIgewogICAgICAgICAgICAgICAgc2luZ2xlUGFnZUFwcGxpY2F0aW9uID0gY29udGFpbmVyICJTaW5nbGUtUGFnZSBBcHAiICJQb3p3YWxhIGtvxbx5c3RhxIcgeiByZXp6ZXJ3YWNqaSBwcnpleiBwcnplZ2zEhWRhcmvEmS4iICJKYXZhU2NyaXB0IGFuZCBBbmd1bGFyIiAiV2ViIEJyb3dzZXIiCiAgICAgICAgICAgICAgICBtb2JpbGVBcHAgPSBjb250YWluZXIgIk1vYmlsZSBBcHAiICJNb2JpbG5hIHdlcnNqYSBzeXRlbXUga2luYSIgIlJlYWN0TmF0aXZlIiAiTW9iaWxlIEFwcCIKICAgICAgICAgICAgICAgIGFwaUFwcGxpY2F0aW9uID0gY29udGFpbmVyICJBUEkiICJPYnPFgnVndWrEhSByesSFZGFuaWEgcHJ6ZXogSlNPTi9IVFRQUyBBUEkuIiAiSmF2YSBhbmQgU3ByaW5nQm9vdCIgewogICAgICAgICAgICAgICAgICAgIGF1dGggPSBjb21wb25lbnQgIkF1dGVudHlrYWNqYSBpIGF1dG9yeXphY2phIiAiT2JzxYJ1Z3VqZSB1enl0a293bmlrw7N3IiAiU3ByaW5nIFJlc3QgQ29udHJvbGxlciIKICAgICAgICAgICAgICAgICAgICByZXNlcnZhdGlvbkNvbXBvbmVudCA9IGNvbXBvbmVudCAiS29tcG9uZW50IFJlemVyd2FjamkiICJSZXplcndhY2phIiAiU3ByaW5nIE1vZHVsZSIKICAgICAgICAgICAgICAgICAgICB0aWNrZXRGYWNhZGVDb21wb25lbnQgPSBjb21wb25lbnQgIktvbXBvbmVudCBrb211bmlrdWrEhWN5IHNpxJkgeiBiaWxldG9tYXRlbSIgIlJlemVyd2FjamEiICJTcHJpbmcgTW9kdWxlIgogICAgICAgICAgICAgICAgICAgIGVtYWlsQ29tcG9uZW50ID0gY29tcG9uZW50ICJFLW1haWwgQ29tcG9uZW50IiAiU2VuZHMgZS1tYWlscyB0byB1c2Vycy4iICJTcHJpbmcgTW9kdWxlIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgZGF0YWJhc2UgPSBjb250YWluZXIgIkRhdGFiYXNlIiAiUHJ6ZXRyenltdWplIGRhbmUgbyB1xbx5dGtvd25pYWtjaCwgcmV6ZXJ3YWNqYWNoIGkgbG9nYWNoIiAiTW9uZm9EYiIgIkRhdGFiYXNlIgogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIAogICAgICAgICNsdWR6aWUgaSBzeXN0ZW15CiAgICAgICAgc2luZ2xlQ3VzdG9tZXIgLT4gY2luZW1hU3lzdGVtICJQcnplZ2xhZCBzZWFuc2UgcmV6ZXJ3dWplIG9ubGluZSBpIHDFgmFjaSIKICAgICAgICBldmVudEN1c3RvbWVyIC0+IGNpbmVtYVN5c3RlbSAiUHJ6ZWdsYWRhIHdvbG5lIHRlcm1pbnkgaSBkb2RhdGtvd2Ugb3BjamUsIHBvYmllcmEgZGFuZSBrb250YWt0b3dlIgogICAgICAgIHNpbmdsZUN1c3RvbWVyIC0+IHBheW1lbnRzICJQxYJhdG5vxZvEhyIKICAgICAgICAKICAgICAgICBzdXBwb3J0U3RhZmYgLT4gY2luZW1hU3lzdGVtICJSZXplcnd1amUiCiAgICAgICAgYmFja29mZmljZSAtPiBjaW5lbWFTeXN0ZW0gIk9ic8WCdWd1amUgYsWCxJlkeSIKCiAgICAgICAgc2luZ2xlQ3VzdG9tZXIgLT4gdGlja2V0U3RhdGlvbiAiUHJ6ZWdsxIVkYSBzZWFuc2UgaSBrdXB1amUgYmlsZXR5IgogICAgICAgIAogICAgICAgIGNpbmVtYVN5c3RlbSAtPiBlbWFpbCAiV3lzecWCYSBtYWlsZSIKICAgICAgICBjaW5lbWFTeXN0ZW0gLT4gcGF5bWVudHMgIlByemVraWVyb3d1amUiCiAgICAgICAgcGF5bWVudHMgLT4gY2luZW1hU3lzdGVtICJJbmZvcm11amUgbyBwxYJhdG5vxZtjaSIKICAgICAgICB0aWNrZXRTdGF0aW9uIC0+IGNpbmVtYVN5c3RlbSAiUmV6ZXJ3dWplIgogICAgICAgIAogICAgICAgIHNpbmdsZUN1c3RvbWVyIC0+IHNpbmdsZVBhZ2VBcHBsaWNhdGlvbiAib2Rpd2VkemEga2luby5wbCIgIkhUVFBTIgogICAgICAgIHN1cHBvcnRTdGFmZiAtPiBzaW5nbGVQYWdlQXBwbGljYXRpb24gIm9kaXdlZHphIGtpbm8ucGwiICJIVFRQUyIKICAgICAgICBldmVudEN1c3RvbWVyIC0+ICBzaW5nbGVQYWdlQXBwbGljYXRpb24gIm9kaXdlZHphIGtpbm8ucGwiICJIVFRQUyIKICAgICAgICBiYWNrb2ZmaWNlIC0+ICBzaW5nbGVQYWdlQXBwbGljYXRpb24gIm9kaXdlZHphIGtpbm8uYWRtaW4ucGwiICJIVFRQUyIKICAgICAgICBzaW5nbGVDdXN0b21lciAtPiBtb2JpbGVBcHAgInByemVnbGFkYSBtb2JpbG7EhSB3ZXJzamUiCiAgICAgICAgCiAgICAgICAgc2luZ2xlUGFnZUFwcGxpY2F0aW9uIC0+IGFwaUFwcGxpY2F0aW9uICJLb3p5c3RhIHogQVBJIiAiSlNPTi9IVFRQUyIKICAgICAgICBtb2JpbGVBcHAgLT4gYXBpQXBwbGljYXRpb24gIktvenlzdGEgeiBBUEkiICJKU09OL0hUVFBTIgogICAgICAgIAogICAgICAgIGFwaUFwcGxpY2F0aW9uIC0+IGVtYWlsICJXeXN5xYJhIGVtYWlsIiAiSlNPTi9IVFRQUyIKICAgICAgICB0aWNrZXRTdGF0aW9uIC0+IGFwaUFwcGxpY2F0aW9uICJSZXplcnd1amUiICJKU09OL0hUVFBTIgogICAgICAgIGFwaUFwcGxpY2F0aW9uIC0+IGRhdGFiYXNlICJaYXBpc3VqZSBTdGFuIgogICAgICAgIAogICAgICAgIAogICAgICAgIG1vYmlsZUFwcCAtPiBhdXRoICJBdXRvcnl6YWNqYSBpIGF1dGVudHlrYWNqZSIKICAgICAgICBzaW5nbGVQYWdlQXBwbGljYXRpb24gLT4gYXV0aCAiQXV0b3J5emFjamEgaSBhdXRlbnR5a2FjamUiCiAgICAgICAgbW9iaWxlQXBwIC0+IHJlc2VydmF0aW9uQ29tcG9uZW50ICJSZXplcnd1amUiCiAgICAgICAgc2luZ2xlUGFnZUFwcGxpY2F0aW9uIC0+IHJlc2VydmF0aW9uQ29tcG9uZW50ICJSZXplcnd1amUiCiAgICAgICAgcmVzZXJ2YXRpb25Db21wb25lbnQgLT4gdGlja2V0RmFjYWRlQ29tcG9uZW50ICJPZMWbd2llxbxhIgogICAgICAgIHRpY2tldEZhY2FkZUNvbXBvbmVudCAtPiB0aWNrZXRTdGF0aW9uICJPZMWbd2llxbxhIgogICAgICAgIHRpY2tldFN0YXRpb24gLT4gcmVzZXJ2YXRpb25Db21wb25lbnQgIlJlemVyd3VqZSIKICAgICAgICBlbWFpbENvbXBvbmVudCAtPiBlbWFpbCAiUG93aWFkYW1pYSIKICAgICAgICByZXNlcnZhdGlvbkNvbXBvbmVudCAtPiBlbWFpbENvbXBvbmVudCAiUHJ6eWdvdHd1amUgdHJlxZvEhyBwb3dpYWRvbWllxYQiCiAgICAgICAgcmVzZXJ2YXRpb25Db21wb25lbnQgLT4gZGF0YWJhc2UgIlphcGlzdWplIFN0YW4sIHBvYmllcmEgYWt0dWFsbnkiCiAgICAgICAgYXV0aCAtPiBkYXRhYmFzZSAiUG9iaWVyYSB1xbx5dGtvd25pa8OzdywgQWt0dWFsaXp1amUgdcW8eXRrb3duaWvDs3ciCiAgICAgICAgCiAgICAgICAgCgoKCiAgICAgICAgZGVwbG95bWVudEVudmlyb25tZW50ICJEZXZlbG9wbWVudCIgewogICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiRGV2ZWxvcGVyIExhcHRvcCIgIiIgIkFwcGxlIG1hY09TIiB7CiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiV2ViIEJyb3dzZXIiICIiICJDaHJvbWUsIEZpcmVmb3gsIFNhZmFyaSwgb3IgRWRnZSIgewogICAgICAgICAgICAgICAgICAgIGRldmVsb3BlclNpbmdsZVBhZ2VBcHBsaWNhdGlvbkluc3RhbmNlID0gY29udGFpbmVySW5zdGFuY2Ugc2luZ2xlUGFnZUFwcGxpY2F0aW9uCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiRG9ja2VyIENvbnRhaW5lciAtIFdlYiBTZXJ2ZXIiICIiICJEb2NrZXIiIHsKICAgICAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiQXBhY2hlIFRvbWNhdCIgIiIgIkFwYWNoZSBUb21jYXQgOC54IiB7CiAgICAgICAgICAgICAgICAgICAgICAgIGRldmVsb3BlcldlYkFwcGxpY2F0aW9uSW5zdGFuY2UgPSBjb250YWluZXJJbnN0YW5jZSBzaW5nbGVQYWdlQXBwbGljYXRpb24KICAgICAgICAgICAgICAgICAgICAgICAgZGV2ZWxvcGVyQXBpQXBwbGljYXRpb25JbnN0YW5jZSA9IGNvbnRhaW5lckluc3RhbmNlIGFwaUFwcGxpY2F0aW9uCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkRvY2tlciBDb250YWluZXIgLSBEYXRhYmFzZSBTZXJ2ZXIiICIiICJEb2NrZXIiIHsKICAgICAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiRGF0YWJhc2UgU2VydmVyIiAiIiAiTW9uZ29EQiIgewogICAgICAgICAgICAgICAgICAgICAgICBkZXZlbG9wZXJEYXRhYmFzZUluc3RhbmNlID0gY29udGFpbmVySW5zdGFuY2UgZGF0YWJhc2UKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgoKICAgIHZpZXdzIHsKICAgICAgICBzeXN0ZW1sYW5kc2NhcGUgIlN5c3RlbUxhbmRzY2FwZSIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCgogICAgICAgIGNvbnRhaW5lciBjaW5lbWFTeXN0ZW0gIkNvbnRhaW5lcnMiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICAgICAgZGVzY3JpcHRpb24gIlRoZSBjb250YWluZXIgZGlhZ3JhbSBmb3IgdGhlIEludGVybmV0IEJhbmtpbmcgU3lzdGVtLiIKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBhcGlBcHBsaWNhdGlvbiAiQ29tcG9uZW50cyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgICAgICBkZXNjcmlwdGlvbiAiVGhlIGNvbXBvbmVudCBkaWFncmFtIGZvciB0aGUgQVBJIEFwcGxpY2F0aW9uLiIKICAgICAgICB9CgoKCiAgICAgICAgZGVwbG95bWVudCBjaW5lbWFTeXN0ZW0gIkRldmVsb3BtZW50IiAiRGV2ZWxvcG1lbnREZXBsb3ltZW50IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhbmltYXRpb24gewogICAgICAgICAgICAgICAgZGV2ZWxvcGVyU2luZ2xlUGFnZUFwcGxpY2F0aW9uSW5zdGFuY2UKICAgICAgICAgICAgICAgIGRldmVsb3BlcldlYkFwcGxpY2F0aW9uSW5zdGFuY2UgZGV2ZWxvcGVyQXBpQXBwbGljYXRpb25JbnN0YW5jZQogICAgICAgICAgICAgICAgZGV2ZWxvcGVyRGF0YWJhc2VJbnN0YW5jZQogICAgICAgICAgICB9CiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICAgICAgZGVzY3JpcHRpb24gIkFuIGV4YW1wbGUgZGV2ZWxvcG1lbnQgZGVwbG95bWVudCBzY2VuYXJpbyBmb3IgdGhlIEludGVybmV0IEJhbmtpbmcgU3lzdGVtLiIKICAgICAgICB9CgoKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgICAgIGZvbnRTaXplIDIyCiAgICAgICAgICAgICAgICBzaGFwZSBQZXJzb24KICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJDdXN0b21lciIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMDg0MjdiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiU3RhZmYiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzk5OTk5OQogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIlNvZnR3YXJlIFN5c3RlbSIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMTE2OGJkCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRXhpc3RpbmcgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM5OTk5OTkKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJDb250YWluZXIiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzQzOGRkNQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIldlYiBCcm93c2VyIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBXZWJCcm93c2VyCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiTW9iaWxlIEFwcCIgewogICAgICAgICAgICAgICAgc2hhcGUgTW9iaWxlRGV2aWNlTGFuZHNjYXBlCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRGF0YWJhc2UiIHsKICAgICAgICAgICAgICAgIHNoYXBlIEN5bGluZGVyCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiQ29tcG9uZW50IiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM4NWJiZjAKICAgICAgICAgICAgICAgIGNvbG9yICMwMDAwMDAKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJGYWlsb3ZlciIgewogICAgICAgICAgICAgICAgb3BhY2l0eSAyNQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQp9"
+    },
+    "revision": 8,
+    "views": {
+        "componentViews": [
+            {
+                "automaticLayout": {
+                    "applied": false,
+                    "edgeSeparation": 0,
+                    "implementation": "Graphviz",
+                    "nodeSeparation": 300,
+                    "rankDirection": "TopBottom",
+                    "rankSeparation": 300,
+                    "vertices": false
+                },
+                "containerId": "11",
+                "description": "The component diagram for the API Application.",
+                "elements": [
+                    {
+                        "id": "6",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "7",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "9",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "10",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "12",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "13",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "14",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "15",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "16",
+                        "x": 0,
+                        "y": 0
+                    }
+                ],
+                "externalContainerBoundariesVisible": false,
+                "key": "Components",
+                "order": 3,
+                "relationships": [
+                    {
+                        "id": "37"
+                    },
+                    {
+                        "id": "38"
+                    },
+                    {
+                        "id": "39"
+                    },
+                    {
+                        "id": "40"
+                    },
+                    {
+                        "id": "41"
+                    },
+                    {
+                        "id": "42"
+                    },
+                    {
+                        "id": "45"
+                    },
+                    {
+                        "id": "46"
+                    },
+                    {
+                        "id": "47"
+                    },
+                    {
+                        "id": "48"
+                    },
+                    {
+                        "id": "49"
+                    }
+                ]
+            }
+        ],
+        "configuration": {
+            "branding": {},
+            "lastSavedView": "DevelopmentDeployment",
+            "metadataSymbols": "SquareBrackets",
+            "styles": {
+                "elements": [
+                    {
+                        "color": "#ffffff",
+                        "fontSize": 22,
+                        "shape": "Person",
+                        "tag": "Person"
+                    },
+                    {
+                        "background": "#08427b",
+                        "tag": "Customer"
+                    },
+                    {
+                        "background": "#999999",
+                        "tag": "Staff"
+                    },
+                    {
+                        "background": "#1168bd",
+                        "color": "#ffffff",
+                        "tag": "Software System"
+                    },
+                    {
+                        "background": "#999999",
+                        "color": "#ffffff",
+                        "tag": "Existing System"
+                    },
+                    {
+                        "background": "#438dd5",
+                        "color": "#ffffff",
+                        "tag": "Container"
+                    },
+                    {
+                        "shape": "WebBrowser",
+                        "tag": "Web Browser"
+                    },
+                    {
+                        "shape": "MobileDeviceLandscape",
+                        "tag": "Mobile App"
+                    },
+                    {
+                        "shape": "Cylinder",
+                        "tag": "Database"
+                    },
+                    {
+                        "background": "#85bbf0",
+                        "color": "#000000",
+                        "tag": "Component"
+                    },
+                    {
+                        "opacity": 25,
+                        "tag": "Failover"
+                    }
+                ]
+            },
+            "terminology": {}
+        },
+        "containerViews": [
+            {
+                "automaticLayout": {
+                    "applied": false,
+                    "edgeSeparation": 0,
+                    "implementation": "Graphviz",
+                    "nodeSeparation": 300,
+                    "rankDirection": "TopBottom",
+                    "rankSeparation": 300,
+                    "vertices": false
+                },
+                "description": "The container diagram for the Internet Banking System.",
+                "elements": [
+                    {
+                        "id": "1",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "2",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "3",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "4",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "6",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "7",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "9",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "10",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "11",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "16",
+                        "x": 0,
+                        "y": 0
+                    }
+                ],
+                "externalSoftwareSystemBoundariesVisible": false,
+                "key": "Containers",
+                "order": 2,
+                "relationships": [
+                    {
+                        "id": "22"
+                    },
+                    {
+                        "id": "27"
+                    },
+                    {
+                        "id": "28"
+                    },
+                    {
+                        "id": "29"
+                    },
+                    {
+                        "id": "30"
+                    },
+                    {
+                        "id": "31"
+                    },
+                    {
+                        "id": "32"
+                    },
+                    {
+                        "id": "33"
+                    },
+                    {
+                        "id": "34"
+                    },
+                    {
+                        "id": "35"
+                    },
+                    {
+                        "id": "36"
+                    },
+                    {
+                        "id": "43"
+                    }
+                ],
+                "softwareSystemId": "8"
+            }
+        ],
+        "deploymentViews": [
+            {
+                "animations": [
+                    {
+                        "elements": [
+                            "50",
+                            "51",
+                            "52"
+                        ],
+                        "order": 1
+                    },
+                    {
+                        "elements": [
+                            "53",
+                            "54",
+                            "55",
+                            "56"
+                        ],
+                        "order": 2,
+                        "relationships": [
+                            "57",
+                            "58"
+                        ]
+                    },
+                    {
+                        "elements": [
+                            "59",
+                            "60",
+                            "61"
+                        ],
+                        "order": 3,
+                        "relationships": [
+                            "62"
+                        ]
+                    }
+                ],
+                "automaticLayout": {
+                    "applied": true,
+                    "edgeSeparation": 0,
+                    "implementation": "Graphviz",
+                    "nodeSeparation": 300,
+                    "rankDirection": "TopBottom",
+                    "rankSeparation": 300,
+                    "vertices": false
+                },
+                "description": "An example development deployment scenario for the Internet Banking System.",
+                "dimensions": {
+                    "height": 2383,
+                    "width": 1817
+                },
+                "elements": [
+                    {
+                        "id": "50",
+                        "x": 175,
+                        "y": 175
+                    },
+                    {
+                        "id": "51",
+                        "x": 175,
+                        "y": 175
+                    },
+                    {
+                        "id": "52",
+                        "x": 1127,
+                        "y": 260
+                    },
+                    {
+                        "id": "53",
+                        "x": 175,
+                        "y": 175
+                    },
+                    {
+                        "id": "54",
+                        "x": 175,
+                        "y": 175
+                    },
+                    {
+                        "id": "55",
+                        "x": 260,
+                        "y": 260
+                    },
+                    {
+                        "id": "56",
+                        "x": 260,
+                        "y": 860
+                    },
+                    {
+                        "id": "59",
+                        "x": 175,
+                        "y": 175
+                    },
+                    {
+                        "id": "60",
+                        "x": 175,
+                        "y": 175
+                    },
+                    {
+                        "id": "61",
+                        "x": 260,
+                        "y": 1610
+                    }
+                ],
+                "environment": "Development",
+                "key": "DevelopmentDeployment",
+                "order": 4,
+                "relationships": [
+                    {
+                        "id": "57"
+                    },
+                    {
+                        "id": "58"
+                    },
+                    {
+                        "id": "62"
+                    }
+                ],
+                "softwareSystemId": "8"
+            }
+        ],
+        "systemLandscapeViews": [
+            {
+                "automaticLayout": {
+                    "applied": false,
+                    "edgeSeparation": 0,
+                    "implementation": "Graphviz",
+                    "nodeSeparation": 300,
+                    "rankDirection": "TopBottom",
+                    "rankSeparation": 300,
+                    "vertices": false
+                },
+                "elements": [
+                    {
+                        "id": "1",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "2",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "3",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "4",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "5",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "6",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "7",
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "id": "8",
+                        "x": 0,
+                        "y": 0
+                    }
+                ],
+                "enterpriseBoundaryVisible": true,
+                "key": "SystemLandscape",
+                "order": 1,
+                "relationships": [
+                    {
+                        "id": "17"
+                    },
+                    {
+                        "id": "18"
+                    },
+                    {
+                        "id": "19"
+                    },
+                    {
+                        "id": "20"
+                    },
+                    {
+                        "id": "21"
+                    },
+                    {
+                        "id": "22"
+                    },
+                    {
+                        "id": "23"
+                    },
+                    {
+                        "id": "24"
+                    },
+                    {
+                        "id": "25"
+                    },
+                    {
+                        "id": "26"
+                    },
+                    {
+                        "id": "44"
+                    }
+                ]
+            }
+        ]
+    }
+}
